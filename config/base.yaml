@@ -1,0 +1,20 @@
+connections:
+  default:
+    engine: tortoise.backends.asyncpg
+    credentials:
+      database: local_db
+      user: local_user
+      password: 96ejDTHMLFA3tBZR
+      host: localhost
+      port: 5432
+      minsize: 1
+      maxsize: 5
+
+apps:
+  models:
+    models: [
+      api.v1.agents.models,
+      api.v1.targets.models,
+      api.v1.tasks.models
+    ]
+    default_connection: default
